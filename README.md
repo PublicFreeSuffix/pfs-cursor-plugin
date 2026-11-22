@@ -65,6 +65,7 @@ The service is also listed in the [official MCP Registry](https://registry.model
 - **No sign-in prompt, or a 401 loop.** Check that the URL is exactly `https://s.eus/api/mcp/pfs`, uses HTTPS, and has no `Authorization` header.
 - **403 with `insufficient_scope`.** Disconnect and reconnect, then approve the write scopes you actually need.
 - **Sign-in fails with a registration error.** Make sure the `auth.CLIENT_ID` field is present; SEUS does not auto-register OAuth clients.
+- **Another client says "the app is misconfigured".** SEUS rejects unregistered loopback ports. Use the device-code bridge configuration in the [full installation guide](https://github.com/PublicFreeSuffix/PublicFreeSuffix/blob/main/mcp/README.md#other-clients).
 
 Try a read-only prompt first: "Use PFS Free Domains to check whether `example.no.kg` is available."
 
