@@ -49,6 +49,8 @@ You never copy a key, token, or client ID into the client. Authorization takes t
 
 The grant is persistent: the client stores tokens securely and renews them automatically, so you normally sign in only once. You will be asked again if you disconnect and reconnect, if you revoke the grant, or if you switch to a client that does not reuse stored tokens. For clients without a browser callback, SEUS also supports the device-code grant.
 
+The client ID belongs to the SEUS OAuth application, not to Cursor. One app serves every MCP client. Browser clients use the callbacks registered on that app, device-code clients need no callback, and clients that cannot auto-register can take the same client ID as a pre-registered value. A second app is only needed for separate revocation control or a different callback allowlist.
+
 Scopes advertised for this resource are `domains:read`, `domains:write`, `dns:read`, `dns:write`, `ssl:read`, `ssl:write`, `hosting:read`, and `hosting:write`. Read-only questions such as availability checks and WHOIS work with the read scopes; registration and DNS changes need the matching write scopes. To revoke access, disconnect the plugin in Cursor and remove the application grant from your SEUS account settings.
 
 ## Other clients
