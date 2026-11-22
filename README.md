@@ -22,7 +22,7 @@ To configure the server manually, add this to `~/.cursor/mcp.json` (all projects
     "pfs": {
       "url": "https://s.eus/api/mcp/pfs",
       "auth": {
-        "CLIENT_ID": "nsc_pBkFDUTYEOHAOZNmtw9Upagy"
+        "CLIENT_ID": "nsc_KY87pj5df041ShWTuuN2R_ZR"
       }
     }
   }
