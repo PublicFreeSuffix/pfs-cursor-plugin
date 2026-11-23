@@ -51,7 +51,7 @@ The grant is persistent: the client stores tokens securely and renews them autom
 
 The client ID belongs to the SEUS OAuth application, not to Cursor. One app serves every MCP client. Browser clients use the callbacks registered on that app, device-code clients need no callback, and clients that carry their own client metadata document (ChatGPT, Codex, VS Code) connect automatically because SEUS supports Client ID Metadata Documents. A second app is only needed for separate revocation control or a different callback allowlist.
 
-Scopes advertised for this resource are `domains:read`, `domains:write`, `dns:read`, `dns:write`, `ssl:read`, `ssl:write`, `hosting:read`, and `hosting:write`. Read-only questions such as availability checks and WHOIS work with the read scopes; registration and DNS changes need the matching write scopes. To revoke access, disconnect the plugin in Cursor and remove the application grant from your SEUS account settings.
+Scopes advertised for this resource are fifteen: the domain stack `domains:read`, `domains:write`, `dns:read`, `dns:write`, `ssl:read`, `ssl:write`, `hosting:read`, and `hosting:write`, plus the community stack `posts:read`, `posts:write`, `feed:read`, `media:read`, `media:write`, `comments:read`, and `profile:read`. Read-only questions such as availability checks and WHOIS work with the read scopes; registration, DNS changes, and community publishing need the matching write scopes. To revoke access, disconnect the plugin in Cursor and remove the application grant from your SEUS account settings.
 
 ## Other clients
 
